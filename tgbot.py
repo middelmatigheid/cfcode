@@ -108,7 +108,7 @@ async def cmd_text(message: types.Message):
 
     elif message.text == 'Считать код':
         await db.update_user_step(message.chat.id, 'read image')
-        await message.answer('Отправь изображение с кодом, расположи код так, чтобы стрелка, указывающая вправо, находилась под кодом')
+        await message.answer('Отправь изображение с кодом, обрежь изображение ровно по коду, чтобы больше не было ничего лишнего и расположи код так, чтобы стрелка, указывающая вправо, находилась под кодом')
 
     elif message.text == 'Мои кода':
         await db.update_user_page(message.chat.id, 1)
